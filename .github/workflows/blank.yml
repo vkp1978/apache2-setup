@@ -12,10 +12,8 @@ jobs:
         uses: actions/setup-java@v1
         with:
           java-version: 8
-      - name: 'Updating System'
-        uses: sudo apt-get update && sudo apt-get upgrade
       - name: 'Installing Dependencies'
-        run: sudo apt-get install -y libc6-i386 lib32z1 lib32stdc++6 && sudo apt install apache2
+        run: sudo apt-get update && sudo apt-get upgrade && sudo apt-get install -y libc6-i386 lib32z1 lib32stdc++6 && sudo apt install apache2
       - name: 'Getting IP'
         run: ip addr show
       - name: 'Save'
