@@ -15,6 +15,6 @@ jobs:
       - name: 'Installing Dependencies'
         run: sudo apt-get update && sudo apt-get upgrade && sudo apt-get install -y libc6-i386 lib32z1 lib32stdc++6 && sudo apt install apache2
       - name: 'Getting IP'
-        run: ip addr show
+        run: curl ifconfig.me
       - name: 'Save'
         uses: actions/upload-artifact@v1.0.0
